@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
-import {  useRef,  useMemo } from 'react';
+import React, { useRef, useMemo, useState, useEffect } from 'react';
+
 
 const buildKeyframes = (from, steps) => {
   const keys = new Set([
