@@ -1,4 +1,4 @@
-import React, {useRef,useEffect} from "react"
+import React, {useRef,useEffect} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -19,7 +19,7 @@ function ScrollSection () {
         const pin = gsap.fromTo(sectionRef.current,{
             translateX : 0
         }, {
-            translateX:"-300vw",
+            translateX:"-400vw",
             ease : "none",
             duration : 1,
             scrollTrigger : {
@@ -34,7 +34,7 @@ function ScrollSection () {
         return () => {
             pin.kill()
         }
-    },{});
+    },[]);
 
     return (
         <section className="scroll-section-outer">
