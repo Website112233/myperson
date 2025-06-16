@@ -1,3 +1,4 @@
+    'use client';
 import React, {useRef,useEffect} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,9 +14,10 @@ function ScrollSection () {
     const sectionRef = useRef(null);
     const triggerRef = useRef(null);
 
-    gsap.registerPlugin(ScrollTrigger);
+    
 
     useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
         const pin = gsap.fromTo(sectionRef.current,{
             translateX : 0
         }, {
